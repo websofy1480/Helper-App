@@ -7,6 +7,9 @@ export default function TopBar() {
   const { setFontSize, fontSize } = useAccessibility();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
+  console.log(theme)
+
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 

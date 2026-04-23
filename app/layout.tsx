@@ -4,6 +4,8 @@ import "./globals.css";
 import { AccessibilityProvider } from "./context/AccessibilityContext";
 import { ThemeProvider } from "next-themes"
 import TopbarServer from "./components/topbar/TopbarServer";
+import { SessionProvider } from "next-auth/react";
+import Providers from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,15 +32,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AccessibilityProvider>
-          <ThemeProvider
-            attribute="class"
-            themes={["light", "dark", "blue", "green", "purple"]}
-            defaultTheme="light"
-          >
-            {children}
-          </ThemeProvider>
-        </AccessibilityProvider>
+        <Providers>
+          <AccessibilityProvider>
+            <ThemeProvider
+              attribute="class"
+              themes={["light", "dark", "blue", "green", "purple"]}
+              defaultTheme="light"
+            >
+              {children}
+            </ThemeProvider>
+          </AccessibilityProvider>
+        </Providers>
       </body>
     </html>
   );
