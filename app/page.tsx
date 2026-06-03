@@ -1,6 +1,7 @@
 import About from "./components/About";
 import AdminBlogPage from "./components/BlogForm";
 import ChatBot from "./components/ChatBot";
+import { HookPractice } from "./components/HookPractice";
 import UploadPage from "./components/Image";
 import ImagesPage from "./components/ImagesPage";
 import ImageUploader from "./components/ImageUploader";
@@ -19,12 +20,13 @@ export default function Home() {
       {/* <AdminBlogPage/> */}
       {/* <CreateKeyword /> */}
       {/* <ImageUploader/> */}
-      <TopBar/>
-       <About/>
+      {/* <TopBar/> */}
+       {/* <About/> */}
       {/* <SpeechToText/> */}
       {/* <WebRtc/> */}
       {/* <OAuth/> */}
       {/* <ChatBot/>/ */}
+      <HookPractice/>
     </>
   );
 }
