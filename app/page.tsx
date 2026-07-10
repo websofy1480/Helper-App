@@ -20,13 +20,13 @@ export default function Home() {
       {/* <AdminBlogPage/> */}
       {/* <CreateKeyword /> */}
       {/* <ImageUploader/> */}
-      {/* <TopBar/> */}
-       {/* <About/> */}
+      <TopBar/>
+       <About/>
       {/* <SpeechToText/> */}
       {/* <WebRtc/> */}
       {/* <OAuth/> */}
       {/* <ChatBot/>/ */}
-      <HookPractice/>
+      {/* <HookPractice/> */}
     </>
   );
 }

@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes"
 import TopbarServer from "./components/topbar/TopbarServer";
 import { SessionProvider } from "next-auth/react";
 import Providers from "./providers";
+import GoogleTranslate from "./components/GoogleTranslate";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="flex justify-end p-4">
+          <GoogleTranslate />
+        </div>
+        
         <Providers>
           <AccessibilityProvider>
             <ThemeProvider

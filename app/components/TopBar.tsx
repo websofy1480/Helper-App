@@ -8,8 +8,6 @@ export default function TopBar() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  console.log(theme)
-
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
